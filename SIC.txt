@@ -1,0 +1,9 @@
+Koneksi WiFi: ESP32 akan mencoba untuk terhubung ke jaringan WiFi yang ditentukan menggunakan SSID dan password yang Anda berikan. Ini dilakukan dalam fungsi setup().
+
+Pembacaan Sensor: ESP32 akan membaca nilai dari sensor yang terhubung ke pin analog yang ditentukan (sensorPin) menggunakan fungsi analogRead(). Nilai sensor ini akan digunakan untuk dikirim ke server.
+
+Mengirimkan Data: ESP32 akan membuat koneksi HTTP ke server lokal yang ditentukan menggunakan objek HTTPClient dari pustaka HTTPClient.h. Data sensor yang dibaca akan dikirim ke server dalam format yang sesuai dengan metode POST.
+
+Menerima Respons: Setelah mengirimkan data, ESP32 akan menunggu respons dari server. Jika respons berhasil diterima (dengan kode status 200), itu akan dicetak di Serial Monitor. Jika ada kesalahan dalam pengiriman data atau respons dari server, kesalahan tersebut akan dicetak di Serial Monitor.
+
+Delay: Setelah menyelesaikan operasi, ESP32 akan menunda (delay) selama 5 detik sebelum mengulangi prosesnya. Ini dilakukan untuk memberikan waktu bagi sistem untuk stabil dan untuk mencegah pengiriman data yang terlalu sering.
